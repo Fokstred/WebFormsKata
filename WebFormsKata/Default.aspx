@@ -49,7 +49,7 @@
                     <asp:Button ID="btnSave" Text="Сохранить" OnClick="btnSave_Click" runat="server" />
                 </td>
                 <td>
-                    <asp:Button ID="btnClear" Text="Очистить" OnClick="btnSave_Click" runat="server" />
+                    <asp:Button ID="btnClear" Text="Очистить" OnClick="btnClear_Click" runat="server" />
                 </td>
             </tr>
         </table>
