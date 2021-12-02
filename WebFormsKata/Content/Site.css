@@ -2,27 +2,12 @@
 }
 
 .body-content {
-    margin: 40px;
+    margin: 4em 0;
 }
 
 .content {
 }
 
-.table-content {
-}
-
-input,
-select,
-textarea {
-    max-width: 280px;
-}
-
-
-@media screen and (min-width: 768px) {
-    .jumbotron {
-        margin-top: 20px;
-    }
-
-    .body-content {
-    }
+.content .container .row {
+    margin: 0.5em 0;
 }

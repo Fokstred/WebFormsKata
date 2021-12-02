@@ -2,56 +2,56 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div class="content">
-        <h3>Ввод данных о пользователе</h3>
-        <table class="table-content">
-            <tr>
-                <td>
+        <div class="container">
+            <h3>Ввод данных о пользователе</h3>
+            <div class="row">
+                <div class="col-lg-2">
                     <asp:Label Text="Фамилия" runat="server" />
-                </td>
-                <td>
+                </div>
+                <div class="col-lg-2">
                     <asp:TextBox ID="txtSurname" runat="server" />
-                </td>
-            </tr>
-            <tr>
-                <td>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2">
                     <asp:Label Text="Имя" runat="server" />
-                </td>
-                <td>
+                </div>
+                <div class="col-lg-2">
                     <asp:TextBox ID="txtName" runat="server" />
-                </td>
-            </tr>
-            <tr>
-                <td>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2">
                     <asp:Label Text="Отчество" runat="server" />
-                </td>
-                <td>
+                </div>
+                <div class="col-lg-2">
                     <asp:TextBox ID="txtPatronymic" runat="server" />
-                </td>
-            </tr>
-            <tr>
-                <td>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2">
                     <asp:Label Text="Должность" runat="server" />
-                </td>
-                <td>
+                </div>
+                <div class="col-lg-2">
                     <asp:TextBox ID="txtPosition" runat="server" />
-                </td>
-            </tr>
-            <tr>
-                <td>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2">
                     <asp:Label Text="Дата рождения" runat="server" />
-                </td>
-                <td>
+                </div>
+                <div class="col-lg-2">
                     <asp:TextBox ID="txtDateOfBirth" runat="server" />
-                </td>
-            </tr>
-            <tr>
-                <td>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2">
                     <asp:Button ID="btnSave" Text="Сохранить" OnClick="btnSave_Click" runat="server" />
-                </td>
-                <td>
+                </div>
+                <div class="col-lg-2">
                     <asp:Button ID="btnClear" Text="Очистить" OnClick="btnClear_Click" runat="server" />
-                </td>
-            </tr>
-        </table>
+                </div>
+            </div>
+        </div>
     </div>
 </asp:Content>
