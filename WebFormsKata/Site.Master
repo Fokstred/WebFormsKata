@@ -32,7 +32,17 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
-        <div class="body-content">
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <a class="navbar-brand" href="~/" runat="server">WebFormsKata</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav lg-4">
+                    <li class="nav-item">
+                        <a class="nav-link" href="~/Kata1" runat="server">Kata1</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
         </div>
