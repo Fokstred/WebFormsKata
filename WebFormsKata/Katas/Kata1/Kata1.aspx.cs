@@ -3,7 +3,7 @@ using System;
 using System.IO;
 using System.Web.UI;
 
-namespace WebFormsKata
+namespace WebFormsKata.Katas.Kata1
 {
     public partial class Kata1 : Page
     {

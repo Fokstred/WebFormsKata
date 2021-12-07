@@ -1,4 +1,4 @@
-﻿namespace WebFormsKata
+﻿namespace WebFormsKata.Katas.Kata1
 {
     public class User
     {

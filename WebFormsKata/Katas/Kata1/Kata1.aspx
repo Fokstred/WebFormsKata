@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Kata1" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Kata1.aspx.cs" Inherits="WebFormsKata.Kata1" %>
+﻿<%@ Page Title="Kata1" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Kata1.aspx.cs" Inherits="WebFormsKata.Katas.Kata1.Kata1" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h5>Ввод данных о пользователе</h5>

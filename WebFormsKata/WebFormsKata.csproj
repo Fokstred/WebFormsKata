@@ -114,7 +114,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="Kata1.aspx" />
+    <Content Include="Katas\Kata1\Kata1.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -253,13 +253,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Kata1.aspx.cs">
+    <Compile Include="Katas\Kata1\Kata1.aspx.cs">
       <DependentUpon>Kata1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Kata1.aspx.designer.cs">
+    <Compile Include="Katas\Kata1\Kata1.aspx.designer.cs">
       <DependentUpon>Kata1.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Katas\Kata1\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -268,7 +269,6 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
-    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

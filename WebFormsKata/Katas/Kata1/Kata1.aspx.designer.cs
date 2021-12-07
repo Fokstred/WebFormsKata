@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebFormsKata
+namespace WebFormsKata.Katas.Kata1
 {
 
 

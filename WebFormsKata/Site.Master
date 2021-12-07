@@ -37,7 +37,7 @@
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav lg-4">
                     <li class="nav-item">
-                        <a class="nav-link" href="~/Kata1" runat="server">Kata1</a>
+                        <a class="nav-link" href="~/Katas/Kata1/Kata1" runat="server">Kata1</a>
                     </li>
                 </ul>
             </div>
