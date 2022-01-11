@@ -1,4 +1,4 @@
-﻿<%@ Page Title="WebFormsKata" Language="C#" UICulture="ru" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebFormsKata._Default" %>
+﻿<%@ Page Title="WebFormsKata" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebFormsKata._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h5>
