@@ -7,6 +7,21 @@ namespace WebFormsKata.Katas.Kata1
 {
     public partial class Kata1 : Page
     {
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+            SetLanguage();
+        }
+
+        protected void Page_Init(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Page_PreLoad(object sender, EventArgs e)
+        {
+
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -21,6 +36,16 @@ namespace WebFormsKata.Katas.Kata1
         protected void btnClear_Click(object sender, EventArgs e)
         {
             ClearForm();
+        }
+
+        private void SetLanguage()
+        {
+            var lang = Context.Request.QueryString["lang"];
+
+            if (!string.IsNullOrWhiteSpace(lang))
+            {
+                UICulture = lang;
+            }
         }
 
         private void SaveUser()
