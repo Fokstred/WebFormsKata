@@ -27,11 +27,11 @@ namespace WebFormsKata
 
         private void SetLanguage()
         {
-            var lang = Context.Request.QueryString["lang"];
+            var language = Context.Request.QueryString["lang"];
 
-            if (!string.IsNullOrWhiteSpace(lang))
+            if (!string.IsNullOrWhiteSpace(language))
             {
-                UICulture = lang;
+                UICulture = language;
             }
         }
     }

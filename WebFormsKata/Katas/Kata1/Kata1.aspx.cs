@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.IO;
+using System.Text;
 using System.Web.UI;
 
 namespace WebFormsKata.Katas.Kata1
@@ -40,15 +41,35 @@ namespace WebFormsKata.Katas.Kata1
 
         private void SetLanguage()
         {
-            var lang = Context.Request.QueryString["lang"];
+            var language = Context.Request.QueryString["lang"];
 
-            if (!string.IsNullOrWhiteSpace(lang))
+            if (!string.IsNullOrWhiteSpace(language))
             {
-                UICulture = lang;
+                UICulture = language;
             }
         }
 
         private void SaveUser()
+        {
+            var user = MapToUser();
+
+            var userJson = JsonConvert.SerializeObject(user);
+
+            var filePath = GetPath(user);
+
+            File.WriteAllText(filePath, userJson);
+        }
+
+        private void ClearForm()
+        {
+            txtSurname.Text = string.Empty;
+            txtName.Text = string.Empty;
+            txtPatronymic.Text = string.Empty;
+            txtPosition.Text = string.Empty;
+            txtDateOfBirth.Text = string.Empty;
+        }
+
+        private User MapToUser()
         {
             var user = new User()
             {
@@ -59,21 +80,25 @@ namespace WebFormsKata.Katas.Kata1
                 DateOfBirth = txtDateOfBirth.Text
             };
 
-            var userJson = JsonConvert.SerializeObject(user);
-
-            var fileName = user.Surname;
-            var filePath = Server.MapPath(@"~\App_Data\" + fileName + ".txt");
-
-            File.WriteAllText(filePath, userJson);
+            return user;
         }
 
-        private void ClearForm()
+        private string GetPath(User user)
         {
-            txtSurname.Text = "";
-            txtName.Text = "";
-            txtPatronymic.Text = "";
-            txtPosition.Text = "";
-            txtDateOfBirth.Text = "";
+            var fileDirectory = @"~\App_Data\";
+            var fileName = user.Surname;
+            var fileExtension = ".json";
+
+            var stringBuilder = new StringBuilder();
+            stringBuilder.Append(fileDirectory);
+            stringBuilder.Append(fileName);
+            stringBuilder.Append(fileExtension);
+
+            var relativeFilePath = stringBuilder.ToString();
+
+            var filePath = Server.MapPath(relativeFilePath);
+
+            return filePath;
         }
     }
 }
