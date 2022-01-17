@@ -66,7 +66,7 @@ namespace WebFormsKata.Katas.Kata1
             txtName.Text = string.Empty;
             txtPatronymic.Text = string.Empty;
             txtPosition.Text = string.Empty;
-            txtDateOfBirth.Text = string.Empty;
+            dtDateOfBirth.Text = string.Empty;
         }
 
         private User MapToUser()
@@ -77,7 +77,7 @@ namespace WebFormsKata.Katas.Kata1
                 Name = txtName.Text,
                 Patronymic = txtPatronymic.Text,
                 Position = txtPosition.Text,
-                DateOfBirth = txtDateOfBirth.Text
+                DateOfBirth = dtDateOfBirth.Date
             };
 
             return user;

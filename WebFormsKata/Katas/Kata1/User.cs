@@ -1,4 +1,6 @@
-﻿namespace WebFormsKata.Katas.Kata1
+﻿using System;
+
+namespace WebFormsKata.Katas.Kata1
 {
     public class User
     {
@@ -6,6 +8,6 @@
         public string Name { get; set; }
         public string Patronymic { get; set; }
         public string Position { get; set; }
-        public string DateOfBirth { get; set; }
+        public DateTime DateOfBirth { get; set; }
     }
 }

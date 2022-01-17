@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="Kata1" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Kata1.aspx.cs" Inherits="WebFormsKata.Katas.Kata1.Kata1" %>
 
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web" Assembly="DevExpress.Web.v17.2" %>
+
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h5>
         <asp:Localize Text="<%$ Resources:Resources, UserDataEntry %>" runat="server" />
@@ -50,7 +52,7 @@
             <asp:Label Text="<%$ Resources:Resources, DateOfBirth %>" runat="server" />
         </div>
         <div class="col-lg-3">
-            <asp:TextBox ID="txtDateOfBirth" runat="server" />
+            <dx:ASPxDateEdit ID="dtDateOfBirth" runat="server" />
         </div>
     </div>
     <div class="row">
