@@ -51,13 +51,13 @@ namespace WebFormsKata.Katas.Kata1
         protected global::System.Web.UI.WebControls.TextBox txtPosition;
 
         /// <summary>
-        /// txtDateOfBirth control.
+        /// dtDateOfBirth control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDateOfBirth;
+        protected global::DevExpress.Web.ASPxDateEdit dtDateOfBirth;
 
         /// <summary>
         /// btnSave control.

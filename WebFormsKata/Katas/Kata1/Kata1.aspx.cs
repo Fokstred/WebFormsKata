@@ -1,12 +1,28 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.IO;
+using System.Text;
 using System.Web.UI;
 
 namespace WebFormsKata.Katas.Kata1
 {
     public partial class Kata1 : Page
     {
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+            SetLanguage();
+        }
+
+        protected void Page_Init(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Page_PreLoad(object sender, EventArgs e)
+        {
+
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -23,7 +39,37 @@ namespace WebFormsKata.Katas.Kata1
             ClearForm();
         }
 
+        private void SetLanguage()
+        {
+            var language = Context.Request.QueryString["lang"];
+
+            if (!string.IsNullOrWhiteSpace(language))
+            {
+                UICulture = language;
+            }
+        }
+
         private void SaveUser()
+        {
+            var user = MapToUser();
+
+            var userJson = JsonConvert.SerializeObject(user);
+
+            var filePath = GetPath(user);
+
+            File.WriteAllText(filePath, userJson);
+        }
+
+        private void ClearForm()
+        {
+            txtSurname.Text = string.Empty;
+            txtName.Text = string.Empty;
+            txtPatronymic.Text = string.Empty;
+            txtPosition.Text = string.Empty;
+            dtDateOfBirth.Text = string.Empty;
+        }
+
+        private User MapToUser()
         {
             var user = new User()
             {
@@ -31,24 +77,28 @@ namespace WebFormsKata.Katas.Kata1
                 Name = txtName.Text,
                 Patronymic = txtPatronymic.Text,
                 Position = txtPosition.Text,
-                DateOfBirth = txtDateOfBirth.Text
+                DateOfBirth = dtDateOfBirth.Date
             };
 
-            var userJson = JsonConvert.SerializeObject(user);
-
-            var fileName = user.Surname;
-            var filePath = Server.MapPath(@"~\App_Data\" + fileName + ".txt");
-
-            File.WriteAllText(filePath, userJson);
+            return user;
         }
 
-        private void ClearForm()
+        private string GetPath(User user)
         {
-            txtSurname.Text = "";
-            txtName.Text = "";
-            txtPatronymic.Text = "";
-            txtPosition.Text = "";
-            txtDateOfBirth.Text = "";
+            var fileDirectory = @"~\App_Data\";
+            var fileName = user.Surname;
+            var fileExtension = ".json";
+
+            var stringBuilder = new StringBuilder();
+            stringBuilder.Append(fileDirectory);
+            stringBuilder.Append(fileName);
+            stringBuilder.Append(fileExtension);
+
+            var relativeFilePath = stringBuilder.ToString();
+
+            var filePath = Server.MapPath(relativeFilePath);
+
+            return filePath;
         }
     }
 }
