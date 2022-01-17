@@ -126,8 +126,14 @@
   <data name="Name" xml:space="preserve">
     <value>Name</value>
   </data>
+  <data name="NameValidationMessage" xml:space="preserve">
+    <value>Name required</value>
+  </data>
   <data name="Patronymic" xml:space="preserve">
     <value>Patronymic</value>
+  </data>
+  <data name="PatronymicValidationMessage" xml:space="preserve">
+    <value>Patronymic required</value>
   </data>
   <data name="Position" xml:space="preserve">
     <value>Position</value>
@@ -140,6 +146,9 @@
   </data>
   <data name="Surname" xml:space="preserve">
     <value>Surname</value>
+  </data>
+  <data name="SurnameValidationMessage" xml:space="preserve">
+    <value>Surname required</value>
   </data>
   <data name="UserDataEntry" xml:space="preserve">
     <value>User data entry</value>

@@ -88,11 +88,29 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Необходимо ввести имя.
+        /// </summary>
+        internal static string NameValidationMessage {
+            get {
+                return ResourceManager.GetString("NameValidationMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Отчество.
         /// </summary>
         internal static string Patronymic {
             get {
                 return ResourceManager.GetString("Patronymic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Необходимо ввести отчество.
+        /// </summary>
+        internal static string PatronymicValidationMessage {
+            get {
+                return ResourceManager.GetString("PatronymicValidationMessage", resourceCulture);
             }
         }
         
@@ -129,6 +147,15 @@ namespace Resources {
         internal static string Surname {
             get {
                 return ResourceManager.GetString("Surname", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Необходимо ввести фамилию.
+        /// </summary>
+        internal static string SurnameValidationMessage {
+            get {
+                return ResourceManager.GetString("SurnameValidationMessage", resourceCulture);
             }
         }
         

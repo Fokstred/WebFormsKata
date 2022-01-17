@@ -126,8 +126,14 @@
   <data name="Name" xml:space="preserve">
     <value>Имя</value>
   </data>
+  <data name="NameValidationMessage" xml:space="preserve">
+    <value>Необходимо ввести имя</value>
+  </data>
   <data name="Patronymic" xml:space="preserve">
     <value>Отчество</value>
+  </data>
+  <data name="PatronymicValidationMessage" xml:space="preserve">
+    <value>Необходимо ввести отчество</value>
   </data>
   <data name="Position" xml:space="preserve">
     <value>Должность</value>
@@ -140,6 +146,9 @@
   </data>
   <data name="Surname" xml:space="preserve">
     <value>Фамилия</value>
+  </data>
+  <data name="SurnameValidationMessage" xml:space="preserve">
+    <value>Необходимо ввести фамилию</value>
   </data>
   <data name="UserDataEntry" xml:space="preserve">
     <value>Ввод данных о пользователе</value>

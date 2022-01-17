@@ -8,31 +8,40 @@
         <div class="col-lg-2">
             <asp:Label Text="<%$ Resources:Resources, Surname %>" runat="server" />
         </div>
-        <div class="col-lg-2">
+        <div class="col-lg-3">
             <asp:TextBox ID="txtSurname" runat="server" />
+        </div>
+        <div class="col-lg-3">
+            <asp:RequiredFieldValidator ErrorMessage="<%$ Resources:Resources, SurnameValidationMessage %>" ControlToValidate="txtSurname" ForeColor="Red" EnableClientScript="true" Display="Dynamic" runat="server" />
         </div>
     </div>
     <div class="row">
         <div class="col-lg-2">
             <asp:Label Text="<%$ Resources:Resources, Name %>" runat="server" />
         </div>
-        <div class="col-lg-2">
+        <div class="col-lg-3">
             <asp:TextBox ID="txtName" runat="server" />
+        </div>
+        <div class="col-lg-3">
+            <asp:RequiredFieldValidator ErrorMessage="<%$ Resources:Resources, NameValidationMessage %>" ControlToValidate="txtName" ForeColor="Red" EnableClientScript="true" Display="Dynamic" runat="server" />
         </div>
     </div>
     <div class="row">
         <div class="col-lg-2">
             <asp:Label Text="<%$ Resources:Resources, Patronymic %>" runat="server" />
         </div>
-        <div class="col-lg-2">
+        <div class="col-lg-3">
             <asp:TextBox ID="txtPatronymic" runat="server" />
+        </div>
+        <div class="col-lg-3">
+            <asp:RequiredFieldValidator ErrorMessage="<%$ Resources:Resources, PatronymicValidationMessage %>" ControlToValidate="txtPatronymic" ForeColor="Red" EnableClientScript="true" Display="Dynamic" runat="server" />
         </div>
     </div>
     <div class="row">
         <div class="col-lg-2">
             <asp:Label Text="<%$ Resources:Resources, Position %>" runat="server" />
         </div>
-        <div class="col-lg-2">
+        <div class="col-lg-3">
             <asp:TextBox ID="txtPosition" runat="server" />
         </div>
     </div>
@@ -40,16 +49,16 @@
         <div class="col-lg-2">
             <asp:Label Text="<%$ Resources:Resources, DateOfBirth %>" runat="server" />
         </div>
-        <div class="col-lg-2">
+        <div class="col-lg-3">
             <asp:TextBox ID="txtDateOfBirth" runat="server" />
         </div>
     </div>
     <div class="row">
         <div class="col-lg-2">
-            <asp:Button ID="btnSave" Text="<%$ Resources:Resources, Save %>" OnClick="btnSave_Click" runat="server" />
+            <asp:Button ID="btnSave" Text="<%$ Resources:Resources, Save %>" OnClick="btnSave_Click" CausesValidation="true" runat="server" />
         </div>
         <div class="col-lg-2">
-            <asp:Button ID="btnClear" Text="<%$ Resources:Resources, Clear %>" OnClick="btnClear_Click" runat="server" />
+            <asp:Button ID="btnClear" Text="<%$ Resources:Resources, Clear %>" OnClick="btnClear_Click" CausesValidation="false" runat="server" />
         </div>
     </div>
 </asp:Content>
